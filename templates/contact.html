@@ -1,0 +1,111 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+               <div class="col-lg-11  pr-0 pl-lg-3 pl-0">
+                  <section class="min-h bg-white  radius-half  padding-dy">
+                     <div class="row ">
+                        <div class="col-lg-12">
+                           {% if messages %}
+                              {% for i in messages%}
+                                 <div class="alert alert-success alert-dismissible fade show " role="alert">
+                                       {% autoescape off %}{{i}}{% endautoescape %}
+                                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                       </button>
+                                 </div>
+                              {% endfor%}
+                           {% endif %}
+                           <div class="main-title position-relative mb-4">
+                              <h2 class="h4 ml-2 mb-0 font-weight-600 ">Contact</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row justify-content-md-between mb-6">
+                        <div class="col-lg-7 mb-5 mb-lg-0">
+                           <div class="card card-lg border-0 shadow-lg">
+                              <div class="card-body p-5">
+                                 <form method="POST" action="/send_msg/">
+                                    {% csrf_token %}
+                                    <div class="d-grid gap">
+                                    <div class="row">
+                                       <div class="col-sm-6 mb-4 mb-sm-0">
+                                             <label class="form-label">First name</label>
+                                             <input type="text" class="form-control" name="fname" id="name" placeholder="name" >
+                                       </div>
+                                       <div class="col-sm-6">
+                                             <label class="form-label">Last name</label>
+                                             <input type="text" class="form-control" name="lname" id="lastName" placeholder="surname">
+                                       </div>
+                                    </div>
+                                    
+                                    <div>
+                                       <label class="form-label" >Work email</label>
+                                       <input type="text" class="form-control" name="email" id="email" placeholder="email@example.com" >
+                                    </div>
+                                    <div>
+                                       <label class="form-label">Message</label>
+                                       <textarea class="form-control" name="text" id="message" placeholder="Type your message..." rows="4"></textarea>
+                                    </div>
+                                    <div class="d-grid">
+                                       <button type="submit" class="btn btn-primary send font-size-16">Send message</button>
+                                    </div>
+                                 </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                           <div class="">
+                              <h4 class="h5 font-weight-600">Let's talk</h4>
+                              <p class=" mb-4">Feel free to get in touch with me. I am always open to discuss new projects, creative ideas or opportunities to be part of your visions.</p>
+                           </div>
+                           <div class="media mb-4">
+                              <div class="ui-icon ui-icon-sm rounded-circle mx-0">
+                                 <div class="ui-icon-inner">
+                                    <i class="fa fa-plus-circle text-alt-2 font-size-18 btn-icon-inner "></i>
+                                 </div>
+                              </div>
+                              <div class="ml-3 media-body">
+                                 <h6 class="font-weight-600  mb-0 ">Freelancing</h6>
+                                 <p class="text-muted mb-0">Freelance Available</p>
+                              </div>
+                           </div>
+                           <div class="media mb-4">
+                              <div class="ui-icon ui-icon-sm rounded-circle mx-0">
+                                 <div class="ui-icon-inner">
+                                    <i class="fa fa fa-globe text-alt-2 font-size-18 btn-icon-inner "></i>
+                                 </div>
+                              </div>
+                              <div class="ml-3 media-body">
+                                 <h6 class="font-weight-600  mb-0 ">General enquiries</h6>
+                                 <a class="text-muted" href="#">soibjonovxalilulloh@gmail.com</a>
+                              </div>
+                           </div>
+                           <div class="media mb-4">
+                              <div class="ui-icon ui-icon-sm rounded-circle mx-0">
+                                 <div class="ui-icon-inner">
+                                    <i class="fa fa fa-phone text-alt-2 font-size-18 btn-icon-inner "></i>
+                                 </div>
+                              </div>
+                              <div class="ml-3 media-body">
+                                 <h6 class="font-weight-600  mb-0 ">Phone Number</h6>
+                                 <a class="text-muted" href="#">+998 97 987 63 73 </a>
+                              </div>
+                           </div>
+                           <div class="media">
+                              <div class="ui-icon ui-icon-sm rounded-circle mx-0">
+                                 <div class="ui-icon-inner">
+                                    <i class="fa fa fa-map-signs text-alt-2 font-size-18 btn-icon-inner "></i>
+                                 </div>
+                              </div>
+                              <div class="ml-3 media-body">
+                                 <h6 class="font-weight-600  mb-0 ">Address</h6>
+                                 <p class="text-muted mb-0">Uzbekistan region. Andijon city</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+       {%endblock content%}

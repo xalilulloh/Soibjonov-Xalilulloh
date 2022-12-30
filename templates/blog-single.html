@@ -1,0 +1,194 @@
+{% extends "base.html"%}
+{% load static%}
+{% block content%}
+               <div class="col-lg-11  pr-0 pl-lg-3 pl-0">
+                  <section class="min-h bg-white  radius-half  padding-dy pb-3">
+                     <div class="row ">
+                        <div class="col-lg-12">
+                           <div class="main-title position-relative mb-4">
+                              <h2 class="h4 ml-2 mb-0 font-weight-600 ">My Blog</h2>
+                           </div>
+                        </div>
+                        <div class="col-lg-12 ">
+                           <article>
+                              
+                              <img class="d-block radius-1" src="assets/img/blog/large/1.jpg" alt="Image">
+                              
+                              <div class="pt-4 w-90 m-auto bg-white position-relative top-75-n pt-6 pb-0 px-4 px-md-6 radius-1">
+                                 <a class=" badge text-white bg-primary-2" href="#">{{blog.category}}</a>
+                                 <h3 class="h4 font-weight-600 mt-2">
+                                    {{blog.title}}
+                                 </h3>
+                                 <p class="lead">{{i.text}}</p>
+                                 <p class="font-weight-500 lead">For major cryptocurrencies today, the conditions are incredibly challenging to satisfy. The higher the hash rate on the network, the more difficult it is to find a valid hash. This is done to ensure that blocks aren’t found too quickly.</p>
+                                 <figure class="my-5">
+                                    <img class="d-block radius-1" src="assets/img/blog/large/2.jpg" alt="Image">
+                                 </figure>
+                                 <div class="mb-5">
+                                    <h5 class="font-weight-600">Let’s recap what we know so far</h5>
+
+                                    <ul class="lead">
+                                       <li>It’s expensive for you to mine.</li>
+                                       <li >You’re rewarded if you produce a valid block.</li>
+                                       <li>Knowing an input, a user can easily check its hash – non-mining users can verify that a block is valid without expending much computational power.</li>
+                                    </ul>
+                                    <p class="lead">So far, so good. But what if you try to cheat? What’s to stop you from putting a bunch of fraudulent transactions into the block and producing a valid hash?</p>
+                                    <p class="lead">When you create a transaction, you sign it. Anyone on the network can compare your signature with your public key, and check whether they match. They’ll also check if you can actually spend your funds and that the sum of your inputs is higher than the sum of your outputs (i.e., that you’re not spending more than you have).</p>
+                                 </div>
+                                 <div class="mb-5">
+                                    <svg class="max-width-3 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.94 147.61">
+                                       <g class="quote-blog">
+                                          <g>
+                                             <g class="quote-shadow">
+                                                <path d="M68,148H35a14.12,14.12,0,0,1-13.84-11.41q-5.27-26.47-5.26-47.71,0-62.8,49.06-71.29A14.11,14.11,0,0,1,81.48,31.48v.59A14.26,14.26,0,0,1,70.65,45.79q-20,5.24-20,32.15v.67A14.11,14.11,0,0,0,64.74,92.72H68a14.1,14.1,0,0,1,14.1,14.1v27.05A14.1,14.1,0,0,1,68,148Zm86.75,0h-33a14.12,14.12,0,0,1-13.84-11.42q-5.25-26.48-5.26-47.7,0-62.8,49-71.29a14.11,14.11,0,0,1,16.49,13.91v.59A14.25,14.25,0,0,1,157.4,45.79q-20,5.24-20,32.15v.67a14.1,14.1,0,0,0,14.1,14.11h3.28a14.1,14.1,0,0,1,14.11,14.1v27.05A14.11,14.11,0,0,1,154.76,148Z" transform="translate(0.07 -0.36)"></path>
+                                             </g>
+                                             <path class="quote-blog-inner" d="M52,131H19A14.12,14.12,0,0,1,5.19,119.57Q-.08,93.1-.07,71.86-.07,9.05,49,.57A14.11,14.11,0,0,1,65.48,14.48v.59A14.26,14.26,0,0,1,54.65,28.79q-20,5.24-20,32.15v.67A14.11,14.11,0,0,0,48.74,75.72H52a14.1,14.1,0,0,1,14.1,14.1v27.05A14.1,14.1,0,0,1,52,131Zm86.75,0h-33a14.12,14.12,0,0,1-13.84-11.42q-5.25-26.48-5.26-47.7,0-62.81,49-71.29a14.11,14.11,0,0,1,16.49,13.91v.59A14.25,14.25,0,0,1,141.4,28.79q-20,5.24-20,32.15v.67a14.1,14.1,0,0,0,14.1,14.11h3.28a14.1,14.1,0,0,1,14.11,14.1v27.05A14.11,14.11,0,0,1,138.76,131Z" transform="translate(0.07 -0.36)"></path>
+                                          </g>
+                                       </g>
+                                    </svg>
+                                    <blockquote class="blockquote">
+                                       “ Proof of Stake does have some benefits over Proof of Work. The most notable one is the smaller carbon footprint – since there’s no need for high-powered mining farms in PoS, the electricity consumed is only a fraction of that consumed in PoW. ”
+                                       <footer class="blockquote-footer text-dark mt-2 font-weight-600 font-size-15">
+{{blog.name}}</footer>
+                                    </blockquote>
+                                 </div>
+                                 <div class="mb-5">
+                                    <h5 class="font-weight-600">Proof of Work vs. Proof of Stake</h5>
+                                    <p class="lead">There are many consensus algorithms, but one of the most highly-anticipated ones is Proof of Stake (PoS). The concept dates back to 2011, and has been implemented in some smaller protocols. But it has yet to see adoption in any of the big blockchains.</p>
+                                    <p>In Proof of Stake systems, miners are replaced with validators. There’s no mining involved and no race to guess hashes. Instead, users are randomly selected – if they’re picked, they must propose (or “forge”) a block. If the block is valid, they’ll receive a reward made up of the fees from the block’s transactions.</p>
+                                 </div>
+                                 <figure class="my-5">
+                                    <img class="d-block radius-1" src="assets/img/blog/large/3.jpg" alt="Image">
+                                 </figure>
+                                 <div class="mb-5">
+                                    <h5 class="font-weight-600">Closing thoughts</h5>
+                                    <p class="lead">Proof of Work was the original solution to the double-spend problem and has proven to be reliable and secure. Bitcoin proved that we don’t need centralized entities to prevent the same funds from being spent twice. With clever use of cryptography, hash functions, and game theory, participants in a decentralized environment can agree on the state of a financial database.</p>
+                                 </div>
+                                 <div class="row align-items-center">
+                                    <div class="col-lg-6">
+                                       <a class="d-flex align-items-center text-decoration-none text-dark" href="#">
+                                          <img class="rounded-circle" src="assets/img/avatar/3.jpg" alt="Image" width="44">
+                                          <div class="pt-2 pr-2 pl-2">
+                                             <h6 class="font-weight-500 text-muted mb-1 font-size-14">Renee Mu</h6>
+                                             <div class="d-flex fs-xs  opacity-60">
+                                                <span class="mr-2 pr-1 font-size-12">
+                                                <i class="fa fa-calendar-alt mr-1"></i>{{i.data}}</span>
+                                                <span class="font-size-12"><i class="fa fa-comment mr-1"></i>3 comments</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="text-lg-right mt-lg-0 mt-3">
+                                          <ul class="list-inline  mb-0 ">
+                                             <li class="list-inline-item  radius-2 mr-1 mb-2 mb-lg-0">
+                                                <a class=" btn btn-round brd btn-icon" href="https://www.facebook.com/xalilulloh soibjonov">
+                                                <span class="fab fa-facebook-square btn-icon-inner"></span>
+                                                </a>
+                                             </li>
+                                             
+                                             <li class="list-inline-item mx-0  radius-2 mb-2 mb-lg-0">
+                                                <a class=" btn btn-round brd btn-icon" href="https://t.me/VIP_1204">
+                                                <span class="fab fa-telegram btn-icon-inner"></span>
+                                                </a>
+                                             </li>
+                                             <li class="list-inline-item  radius-2 mr-1 mb-2 mb-lg-0">
+                                                <a class=" btn btn-round brd btn-icon" href="https://www.instagram.com/invites/contact/?i=udzale3fexhv&utm_content=l5ldxmk">
+                                                <span class="fab fa-instagram btn-icon-inner"></span>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="mt-6  mb-6 text-center">
+                                    <svg class="w-65 w-md-40 w-lg-25 " data-name="divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.54 9.24">
+                                       <path class="divider" d="M1.26,3.24C19.55,3.11,19.6,9.11,37.89,9S56.15,2.87,74.45,2.74,92.79,8.62,111.09,8.5s18.26-6.13,36.56-6.25S166,8.13,184.29,8" transform="translate(-0.01 -1)"></path>
+                                    </svg>
+                                 </div>
+                                 <div class="text-center mx-lg-auto ">
+                                    <h3 class="font-weight-600 mb-0">3 comments</h3>
+                                 </div>
+                                 <ul class="comments-list list-inline mt-6 mb-0">
+                                 
+                                    <li class="list-inline-item mr-0">
+                                       <div class="comment">
+                                          <div class="media align-items-center mb-2">
+                                             <div class="radius-3 shadow-inner">
+                                                <div class="  p-1  ">
+                                                   <div class="shadow radius-3 p-1">
+                                                      <img class="rounded-circle max-width-3" src="assets/img/avatar/1.jpg" alt="Image">
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="ml-2 media-body">
+                                                <a class="d-block text-dark mb-0 font-weight-600 font-size-14" href="#">Jeremy Spivak</a>
+                                                <small class="d-block text-muted font-size-12">14th February 2022</small>
+                                             </div>
+                                          </div>
+                                          <p>
+                                             That said, it has nowhere near the track record of PoW. Although it could be perceived as wasteful, mining is the only consensus algorithm that’s proven itself at scale.
+                                          </p>
+                                          <a class="font-weight-500" href="#">
+                                          Reply
+                                          </a>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <div class="mt-6  mb-6 text-center">
+                                    <svg class="w-65 w-md-40 w-lg-25  " data-name="divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.54 9.24">
+                                       <path class="divider" d="M1.26,3.24C19.55,3.11,19.6,9.11,37.89,9S56.15,2.87,74.45,2.74,92.79,8.62,111.09,8.5s18.26-6.13,36.56-6.25S166,8.13,184.29,8" transform="translate(-0.01 -1)"></path>
+                                    </svg>
+                                 </div>
+                                 {% if messages %}
+                                 {% for i in messages%}
+                                    <div class="alert alert-success alert-dismissible fade show " role="alert">
+                                          {% autoescape off %}{{i}}{% endautoescape %}
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                          </button>
+                                    </div>
+                                 {% endfor%}
+                              {% endif %}
+                                 <div class="text-center mx-lg-auto mb-6">
+                                    <h3 class="font-weight-600 mb-0">Post a comment</h3>
+                                 </div>
+                                 <div class="card">
+                                    <div class="card-body p-5">
+                                       <form action="/comment/" method="post">
+                                          {% csrf_token %}
+                                          <div class="d-grid gap">
+                                             <div class="row">
+                                                <div class="col-sm-6 mb-4 mb-sm-0">
+                                                   <label class="form-label">First name</label>
+                                                   <input type="text" class="form-control" name="fname" placeholder="fname">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                   <label class="form-label">Last name</label>
+                                                   <input type="text" class="form-control" name="lname" placeholder="lname" >
+                                                </div>
+                                             </div>
+                                             <span class="d-block">
+                                             <label class="form-label">Your email</label>
+                                             <input type="email" class="form-control" name="email" placeholder="email@example.com">
+                                             </span>
+                                             <span class="d-block">
+                                             <label class="form-label">Comment</label>
+                                             <textarea class="form-control" name="text" placeholder="Leave your comment here..."  rows="7"></textarea>
+                                             </span>
+                                             <div class="d-grid">
+                                                <button type="submit" class="btn btn-primary font-size-16">Submit comment</button>
+                                             </div>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                             
+                           </article>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+           {% endblock content %}
